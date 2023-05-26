@@ -1,8 +1,15 @@
-# RT1 - Assignment 2 - ROS Simulator 
+# RT2 - Assignment 1 - Doxygen Documentation on ROS Simulator 
 RT1 - Assignment 2 - ROS Simulator
 **Professor: Carmine Tommaso Recchiuto, Student: Aurora Bottino (s4814504)**
 
-# Assignment Description
+In the first assignment of Research Track 2 we were asked to add the documentation to the github repository of our second assignment Research Track 1. 
+I decided to use Doxygen.
+
+
+
+
+
+# RT1 Assignment 2 Description
 
 Starting from the package assignment_2_2022 (https://github.com/CarmineD8/assignment_2_2022), which provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm, the following project creates a new package in which three nodes are developed:
 
