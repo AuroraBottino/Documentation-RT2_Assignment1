@@ -1,0 +1,70 @@
+\hypertarget{service_8py}{}\doxysection{scripts/service.py File Reference}
+\label{service_8py}\index{scripts/service.py@{scripts/service.py}}
+
+
+This code implements a R\+OS node that provides a service to count goals cancelled or reached, and a subscriber to receive the result of a planning action.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{service_8py_a8bda1a8761095d7cd1e6f24a7c4b4bc0}{service.\+result}} (msg)
+\begin{DoxyCompactList}\small\item\em Function for counting goals actions to send to the subscriber. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{service_8py_a012282aa903590fc45e7968837c292ae}{service.\+data}} (req)
+\begin{DoxyCompactList}\small\item\em Service function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{service_8py_ae1828fef729c78407f58e5a4afcbbd06}\label{service_8py_ae1828fef729c78407f58e5a4afcbbd06}} 
+def \mbox{\hyperlink{service_8py_ae1828fef729c78407f58e5a4afcbbd06}{service.\+main}} ()
+\begin{DoxyCompactList}\small\item\em Main function that initializes the node, creates the service, and subscribes to the result topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{service_8py_a15973ceb1d771bd88ff2197670ac144d}\label{service_8py_a15973ceb1d771bd88ff2197670ac144d}} 
+int {\bfseries service.\+goal\+\_\+canc} = 0;
+\item 
+\mbox{\Hypertarget{service_8py_aebba78f93dce079b90840a98a78cf91d}\label{service_8py_aebba78f93dce079b90840a98a78cf91d}} 
+int {\bfseries service.\+goal\+\_\+reach} = 0;
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This code implements a R\+OS node that provides a service to count goals cancelled or reached, and a subscriber to receive the result of a planning action. 
+
+\begin{DoxyAuthor}{Author}
+Aurora Bottino 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+24/01/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{service_8py_a012282aa903590fc45e7968837c292ae}\label{service_8py_a012282aa903590fc45e7968837c292ae}} 
+\index{service.py@{service.py}!data@{data}}
+\index{data@{data}!service.py@{service.py}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily def service.\+data (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+
+
+Service function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & -\/ The request for the service. return goal\+\_\+srv\+Response -\/ The response of the service with the number of goals cancelled and reached. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{service_8py_a8bda1a8761095d7cd1e6f24a7c4b4bc0}\label{service_8py_a8bda1a8761095d7cd1e6f24a7c4b4bc0}} 
+\index{service.py@{service.py}!result@{result}}
+\index{result@{result}!service.py@{service.py}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}}
+{\footnotesize\ttfamily def service.\+result (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Function for counting goals actions to send to the subscriber. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message that contains the status of the result. \\
+\hline
+\end{DoxyParams}
